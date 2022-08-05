@@ -1,0 +1,541 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family:'Poppins', sans-serif;
+}
+
+.container{
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.container .navbar{
+    background-color: rgb(111, 46, 214);
+    width: 100%;
+    margin: 0 auto;
+}
+
+a{
+    text-decoration: none;
+}
+
+.navbar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.navbar .logo{
+    padding-left: 13%;
+}
+
+.navbar ul{
+    padding-right: 30%;
+}
+.logo{
+    width: 25%;
+    cursor: pointer;
+    margin: 15px 0;
+}
+.menu-icon{
+    width: 25px;
+    cursor:pointer;
+    display: none;
+}
+nav{
+    flex: 1;
+    text-align: right;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 30px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1 rem;
+}
+nav ul li a:hover{
+    text-decoration: underline white;
+}
+
+.mobile-menu{
+    float: right;
+    display: none;
+    padding: 17px;
+    margin-top: 17px;
+}
+.mobile-menu:hover{
+    cursor: pointer;
+}
+
+#check{
+    display: none;
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -300px;
+    width: 300px;
+    background-color: #E7E7D6;
+    transition:0.3s;
+    z-index: 9999;
+}
+
+.sidebar ul li a{
+    color: black;
+}
+
+.sidebar ul li{
+    padding: 24px;
+    transition: 0.3s;
+    transition-property: background-color;
+}
+
+.sidebar ul li:hover{
+    background-color: rgb(155, 115, 219);
+}
+
+#check:checked ~ .sidebar{
+    left: 0px;
+}
+
+/*Banner*/
+.up-bar{
+    background-color: rgb(111, 46, 214);
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    
+}
+
+.left{
+    flex-basis: 40%;
+    position: relative;
+    padding-left: 15%;
+}
+.left h2{
+    font-size: 30px;
+    color: white;
+}
+
+.left h2 span{
+    color: yellow;
+}
+.left p{
+    padding-top: 20px;
+    color: white;
+}
+
+.left .icon{
+    display: flex;
+    margin-top: 35px;
+}
+.iconblock{
+    height: 130px;
+    width: 130px;
+    box-sizing: border-box;
+    color: white;
+    padding: 20px;
+    margin-right: 20px;
+    font-size: 12px;
+    border-radius: 10px;
+    box-shadow: -1px 3px 10px 0px rebeccapurple ;
+    transition: .3s;
+    font-weight: 550;
+}
+.iconblock i{
+    font-size: 22px;
+}
+
+.iconblock p{
+    padding-top: 7px;
+}
+.left .iconblock:hover{
+    background: yellow;
+    color: purple;
+    cursor: pointer;
+}
+.left .iconblock p:hover{
+    color: purple;
+}
+.active{
+    background: yellow;
+    color: purple;
+}
+.active p{
+    color: purple;
+}
+
+.right{
+    position: relative;
+    flex-basis: 60%;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+}
+.right img{
+    width: auto;
+    margin-bottom: -30px;
+    margin-left: 50px;
+}
+
+/* MAIN
+
+Unterricht*/
+.small-container{
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 150px;
+    padding-right: 150px;
+    margin-bottom: 30px;
+
+}
+
+.small-container .small{
+    font-size: 15px;
+    letter-spacing:1px;
+    text-align: center;
+    margin-top: 40px;
+}
+.title{
+    text-align: center;
+    margin: 0 auto 20px;
+    position: relative;
+    font-size: 45px;
+    color: #28132A;
+    letter-spacing: -1px;
+}
+
+/*.title{
+	margin-top: 30px;
+    padding-bottom: 0;
+    align-items: center;
+}*/
+.title::after{
+    content: "";
+    background: blueviolet;
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.box{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 400px;
+}
+.card{
+	height: 330px;
+	width: 200px;
+	padding: 20px 35px;
+	background: rgb(206, 191, 215);
+	border-radius: 20px;
+	margin: 15px;
+	position: relative;
+	overflow: hidden;
+	text-align: center;
+}
+.card i{
+	font-size: 30px;
+	display: block;
+	text-align: center;
+	color:purple;
+    padding-top: 0;
+    padding-bottom: 5px;
+}
+
+.card h4{
+	color: purple;
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+.pra p{
+	color: purple;
+	font-size: 12px;
+	line-height: 27px;
+	margin-bottom: 15px;
+}
+.card .button{
+	background-color:whitesmoke;
+	color: purple;
+	text-decoration: none;
+	border: 2px solid transparent;
+	font-weight: 20px;
+	padding: 9px 22px;
+	border-radius: 30px;
+	transition: .4s; 
+}
+.card .button:hover{
+	background-color: purple;
+	cursor: pointer;
+    color: white;
+}
+/*KURSE*/
+
+#kurse .subtitle2{
+    text-align: left;
+}
+
+.subtitle2 p{
+    font-size: 1rem;
+    color:black;
+    text-align: left;
+}
+
+
+#kurse .subtitle2 h4{
+    font-size: 2rem;
+}
+
+.subtitle2 .txt{
+    font-size: 1rem;
+}
+
+#kurse .box-container{
+    display: flex;
+	justify-content: center;
+	align-items: center;
+    margin: 0 auto;
+}
+
+#kurse .kolom-2{
+    flex-basis: 50%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50px;
+}
+.kolom-2 img{
+    margin-top: 10px;
+    width: 100%;
+}
+
+.kolom-2 a:hover img{ 
+    transform: scale(1.1)
+}
+.kolom-2 .content{
+    margin-top: 10px;
+}
+.kolom-2 .content .titlee{
+    font-size: 20px;
+    color: purple;
+}
+
+.kolom-2 .content p{
+    font-size: 15px;
+}
+
+.kolom-2 .content .btn{
+    font-size: 15px;
+    color: purple;
+}
+.kolom-2 .content .btn:hover{
+    text-decoration: underline;
+}
+
+/*Uber Uns*/
+#uber-uns .about{
+    display: flex;
+	justify-content: center;
+	align-items: center;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.about .col-2{
+    flex-basis: 100%;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+.col-2 img{
+    width: 100%;
+}
+
+.col-2 img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+
+.col-2 .icon{
+    display: flex;
+    margin-top: 25px;
+}
+.col-2 .iconblock{
+    height: 180px;
+    width: 220px;
+    box-sizing: border-box;
+    color: purple;
+    padding: 15px;
+    margin-right: 20px;
+    font-size: 12px;
+    border-radius: 10px;
+    box-shadow: -1px 3px 4px 0px rebeccapurple ;
+    transition: .3s;
+    font-weight: 550;
+    background-color: #E7E7D6;
+}
+.col-2 .iconblock i{
+    font-size: 22px;
+    padding-right: 5px;
+}
+
+.col-2 .iconblock p{
+    padding-top: 7px;
+    color:purple;
+}
+.col-2 .iconblock h4{
+    font-size: 14px;
+}
+.col-2 .iconblock:hover{
+    background-color: #E173FB;
+    color:white;
+}
+
+.col-2 .iconblock h4:hover{
+    color:blanchedalmond;
+}
+.col-2 .iconblock p:hover{
+    color: white;
+}
+.col-2 .iconblock .button{
+    color:purple;
+}
+.col-2 .iconblock .button:hover{
+    color:black;
+    background-color: yellow;
+}
+.efek-ketik{
+    color: purple;
+    font-size: large;
+}
+.efek-ketik:hover{
+    text-decoration:underline;
+    font-size: x-large;
+}
+/*.orte{
+    font-size: 22px;
+    padding-bottom: 10px;
+    color: #28132A;
+}
+
+} */
+
+/*Kontakte*/
+
+#contact .kontakt{
+    display: flex;
+	justify-content: center;
+	align-items: center;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.kontakt .col-2{
+    flex-basis: 100%;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+.kontakt .col-2 img{
+    width: 100%;
+}
+
+.col-2 img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.col-2 form h3{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color:var(--black);
+}
+ 
+.col-2 form .box-3{
+    width: 100%;
+    padding:0.5rem;
+    font-size: 1rem;
+    color:var(--black);
+    border:var(--border);
+    margin:1rem 0;
+    border-radius: 5px;
+    box-shadow: 1px -1px 2px 0px rebeccapurple ;
+    transition: .3s;
+    font-weight: 550;
+    background-color: #E7E7D6;
+
+}
+
+ 
+.footer{
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.footer .share{
+    padding:1rem 0;
+}
+
+.footer .share a{
+    height: 3rem;
+    width: 3rem;
+    line-height: 3rem;
+    font-size: 2rem;
+    color: black;
+    border-radius: 50%;
+    margin: .5rem;
+    border: 1px solid;
+}
+
+.footer .share a:hover{
+    background-color: rgb(108, 62, 182);
+}
+
+.footer .credit{
+    font-size: 15px;
+    color:black;
+    padding-top:1.5rem;
+}
+
+.footer .credit span{
+    color:purple;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 768px){  
+    .mobile-menu {
+        display: block;
+    }
+    nav ul li {
+        display: none;
+    }
+    .container{
+        width: 100%;
+    }
+    .right{
+        flex-basis: 100%;
+        margin-bottom: 50px;
+    }
+    .right .person{
+        width: 77%;
+    }
+}   
